@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parctice</title>
+</head>
+<body>
+    <h1>JavaScript Practice</h1>
+    <h2>Looping an array</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const fruits=["banana","orange","apple","guava", "Cherry","Strawberris","kiwi","watermelon","pineapplae"];
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.push("Lemon")
+        // let flen=fruits.length;
+        let text="<ul>";
+        fruits.forEach(myFunction);
+        // for(let i=0;i<flen;i++){
+        //     text+="<li>"+fruits[i]+"</li>"
+        // }
+        text+="</ul>"
+        document.getElementById("demo").innerHTML=text+" Type of text:"+typeof(text)+ "\nType of fruits:"+typeof(fruits);
+        document.write(fruits instanceof Array);//returns true if an object is created by a given constructor
+        document.write("length of fruits "+fruits.length+"<br>");
+        document.write("String conversion of fruits="+fruits.toString()+"<br>");
+        // document.write(fruits.pop());
+        document.write(fruits.join("*")+"<br>");
+        document.write(fruits.pop() + "<br>");
+        document.write("pushing new element"+fruits.push("Gayatri") + "<br>");
+        const combo=fruits.concat(fruits2);
+        document.write(combo+"<br>")
+        document.write(fruits.sort() + "<br>");
+        document.write(fruits.reverse() + "<br>");
+
+        function myFunction(value){
+            text+="<li>"+value+"</li>"
+        }
+        </script>
+</body>
+</html>

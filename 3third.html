@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<body>
+    <h2>Headung for the template</h2>
+    <p id="demo"></p>
+    <p>Template literals are not supported in Internet Explorer</p>
+    <script>
+        let header="template literals";
+        let tags=["template literals", "javascript","es6"];
+        let html=`<h2>${header}</h2><ul>`;
+
+            for(const x of tags){
+                html+=`<li>${x}</li>`
+            }
+            html+=`</ul>`;
+            document.getElementById("demo").innerHTML=html;
+    </script>
+</body>
+</html>

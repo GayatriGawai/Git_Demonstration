@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch Finally</title>
+</head>
+<body>
+    <h2>
+        JavaScript Try Catch block
+    </h2>
+    <p>Please enter the nput number between 10 to 100</p>
+
+    <input type="text" id="demo">
+    <button type="button" onclick="myFunction()">Test input</button>
+    <p id="p1"></p>
+    <script>
+        function myFunction(){
+            const message=document.getElementById("p1");
+            message.innerHTML="";
+            let x=document.getElementById("demo").value;
+            try{
+                if(x.trim()=="") throw "Empty string";
+                if(isNaN(x)) throw "Not a number";
+                x=Number(x);
+                if(x>100) throw " Too high";
+                if(x<10) throw " too low";
+            }
+            catch(err){
+                message.innerHTML="Input is"+err;
+            }
+            finally{
+                document.getElementById("demo").value="";
+            }
+        }
+    </script>
+
+</body>
+</html>

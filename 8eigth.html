@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classes</title>
-</head>
-<body>
-    <p id="demo"></p>
-    <script>
-        class Cars{
-            constructor(name, year){
-                this.name=name;
-                this.year=year;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Classes</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            laudantium nam, vero eveniet labore animi placeat in officia
+            consectetur aliquid? Vitae doloremque dolor laudantium deserunt
+            harum accusamus illo saepe ea.
+        </p>
+        <script>
+            class Cars {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+                age() {
+                    const date = new Date();
+                    return date.getFullYear() - this.year;
+                }
             }
-            age(){
-                const date=new Date();
-                return date.getFullYear()-this.year;
-            }
-        }
-        const myCar1 = new Cars("Ford", 2014);
-        const myCar2 = new Cars("Audi", 2019);
-        document.getElementById("demo").innerHTML = "may car is "+myCar1.age()+" years old"
-    </script>
-</body>
+            const myCar1 = new Cars('Ford', 2014);
+            const myCar2 = new Cars('Audi', 2019);
+            document.getElementById('demo').innerHTML =
+                'may car is ' + myCar1.age() + ' years old';
+        </script>
+    </body>
 </html>
